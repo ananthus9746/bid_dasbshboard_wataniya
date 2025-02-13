@@ -1,0 +1,79 @@
+.chartContainer {
+    background-color: rgba(255, 255, 255, 0.473);
+        padding: 14px;
+    width: 20%;
+    border-radius: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.header span{
+    font-size: 10px;
+}
+
+.arrow {
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.045);
+}
+
+.barsContainer{
+    width: 60%;
+}
+.previousBar {
+    background-color: rgba(215, 215, 215, 0.514);
+    height: 9px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+
+}
+
+.currentBar {
+    background: linear-gradient(to right, #005189, #00A8E1);
+    height: 9px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.currentBar_orage {
+    background: linear-gradient(to right, #CA5E3B, #FF6060);
+    width: 150px;
+    height: 9px;
+
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.chartWrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.chartTitle {
+    color: gray;
+    font-size: 8px;
+    font-weight: 300;
+
+}
+
+.growthText {
+    color: gray;
+    font-size: 6px;
+}
+
+.amountText {
+    font-weight: 500;
+    font-size: 0.7rem;
+    padding: 0px;
+    margin: 0px;
+}

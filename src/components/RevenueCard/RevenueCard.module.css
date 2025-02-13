@@ -1,0 +1,38 @@
+.card {
+    background-color: rgba(255, 255, 255, 0.51);
+        border-radius: 11px;
+    padding: 10px;
+    width: 10%;
+    height:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.title {
+    font-size: 9px;
+    color: #000;
+    margin: 0;
+}
+
+.badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #e9f8e1;
+    border-radius: 12px;
+    padding: 3px 8px;
+    display: flex;
+    align-items: center;
+    font-size: 8px;
+    gap: 4px;
+    color: #000;
+}
+
+.value {
+    font-size: 10px;
+    font-weight: 500;
+    margin: 0;
+    color: #000;
+}

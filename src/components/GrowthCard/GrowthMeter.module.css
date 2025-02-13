@@ -1,0 +1,27 @@
+.meterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 130px;
+}
+
+.percentageContainer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 18px;
+}
+
+.percentageText {
+    font-size: 9px;
+    font-weight: 300;
+    color: black;
+}
+
+.arrowIcon {
+    font-size: 8px;
+    color: #FF6B6B;
+    margin-left: 5px;
+}

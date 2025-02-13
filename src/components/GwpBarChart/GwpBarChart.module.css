@@ -1,0 +1,59 @@
+.container_chart {
+    width: 50%;
+    border-radius: 12px;
+padding: 6px;
+    background-color: rgba(255, 255, 255, 0.565);
+
+}
+.chart_contain{
+    /* background-color: #000; */
+    margin-left: -20px;
+}
+.content{
+    padding: 10px;
+}
+.title {
+    font-weight: normal;
+    color: rgb(78, 78, 78);
+    font-size: 12px;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+.year{
+    font-size: 11px;
+    color: gray;
+    margin-top: 5px;
+}
+
+.amount {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+.subText {
+    color: gray;
+    font-size: 9px;
+    margin-left: 10px;
+}
+
+.tooltip {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tooltipText {
+    margin: 0;
+    color: #000;
+}
+
+.tooltipAmount {
+    margin: 0;
+    font-weight: bold;
+}
