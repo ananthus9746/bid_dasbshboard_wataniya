@@ -29,7 +29,7 @@ const GrowthBarChart = () => {
                     <span className={styles.chartTitle}>Corporate</span>
 
                     <div className={styles.previousBar} style={{ width: "100%" }} />
-                    <div className={styles.currentBar_orage} style={{ width: "50%" }} />
+                    <div className={styles.currentBar_orange} style={{ width: "50%" }} />
                 </div>
                 <div>
                     <span className={styles.growthText}>30% growth than last year</span>

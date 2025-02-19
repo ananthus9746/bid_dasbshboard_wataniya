@@ -10,7 +10,7 @@ import ChartWrapper from "./components/ChartWrapper/ChartWrapper";
 const App = () => {
 
   return (
-    <div >
+    <div className='wrapper'>
       <Header />
       <div className="main_wrapper">
         <div className="left_side">

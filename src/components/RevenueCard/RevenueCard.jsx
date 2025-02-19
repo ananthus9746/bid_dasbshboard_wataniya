@@ -8,7 +8,7 @@ const RevenueCard = () => {
             <p className={styles.title}>New</p>
             <div className={styles.badge}>
                 <span>+17%</span>
-                <MdArrowOutward size={9} />
+                <MdArrowOutward/>
             </div>
             <p className={styles.value}>$120,873</p>
         </div>

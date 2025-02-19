@@ -9,16 +9,28 @@ body {
   background-attachment: fixed;
   background-size: 700px 700px;
 }
+html {
+  overflow: auto;
+  /* Keeps the scroll functionality */
+  scrollbar-width: none;
+  /* For Firefox */
+}
 
+html::-webkit-scrollbar {
+  display: none;
+  /* For Chrome, Safari, and newer Edge */
+}
+
+.wrapper{
+  padding: 20px 35px;
+}
 
 .main_wrapper{
   display: flex;
 }
 .left_side{
 width: 23%;
-  /* background-color: #5e8cc93b; */
 }
 .right_side{
   width: 77%;
-  /* background-color: #45618651; */
 }
