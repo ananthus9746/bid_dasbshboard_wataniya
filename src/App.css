@@ -8,6 +8,14 @@ body {
   position: relative;
   height: 100vh;
   width: 100vw;
+
+
+    background-image: url(./assets/bg_globe.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      background-attachment: fixed;
+      background-size: 700px 700px;
 }
 html {
   overflow: auto;
@@ -16,10 +24,13 @@ html {
   /* For Firefox */
 }
 
-.app_wrapper {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
+html::-webkit-scrollbar {
+  display: none;
+  /* For Chrome, Safari, and newer Edge */
+}
+
+.wrapper{
+  padding: 20px 35px;
 }
 
 .globe_background {
@@ -52,9 +63,8 @@ html {
 .main_wrapper {
   display: flex;
 }
-
-.left_side {
-  width: 23%;
+.left_side{
+width: 23%;
 }
 
 .right_side {
