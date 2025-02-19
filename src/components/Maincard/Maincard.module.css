@@ -1,8 +1,9 @@
 .container_wrapper {
-    padding: 20px;
     border-radius: 8px;
     width: 320px;
     font-family: Arial, sans-serif;
+margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
@@ -77,4 +78,43 @@
     color: #848484;
     padding: 0px;
     margin: 0px;
+}
+
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+    .container_wrapper {
+        width: 280px;
+    }
+
+    .title {
+        font-size: 10px;
+        margin-bottom: 1px;
+    }
+
+    .subtitle {
+        font-size: 8px;
+        margin-bottom: 6px;
+    }
+
+    .amount {
+        font-size: 34px;
+    }
+
+    .growth {
+        padding: 4px 10px;
+        font-size: 10px;
+        border-radius: 10px;
+    }
+
+    .footer {
+        margin-top: 25px;
+    }
+
+    .gwpTitle {
+        font-size: 8px;
+    }
+
+    .gwpAmount {
+        font-size: 16px;
+    }
 }

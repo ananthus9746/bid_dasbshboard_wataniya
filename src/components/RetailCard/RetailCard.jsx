@@ -14,7 +14,7 @@ const RetailCard = () => {
                 <div className={styles.badge_conta}>
                     <div className={styles.growthBadge}>
                         <span>+17%</span>
-                        <MdArrowOutward size={14} />
+                        <MdArrowOutward  />
                     </div>
                     <span className={styles.subText}>Than last year</span>
                 </div>

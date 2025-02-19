@@ -1,10 +1,11 @@
 .header {
-  padding: 10px 20px;
-  display: flex;
+      display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
   margin-bottom: 20px;
+
+
 }
 
 .greeting {
@@ -75,5 +76,59 @@
 .icon {
 
 
-  width: 50px;
+    width: 35px;}
+
+
+
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .header {
+    margin-bottom: 15px;
+    border-radius: 8px;
+
+    
+  }
+
+  .greeting {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  .left h2 {
+    font-size: 20px;
+  }
+
+  .left span {
+    font-size: 14px;
+  }
+
+  .logo {
+    max-width: 130px;
+  }
+
+  .right {
+    gap: 20px;
+  }
+
+  .timer {
+    font-size: 16px;
+    letter-spacing: 6px;
+    margin-bottom: 0px;
+  }
+
+  .date {
+    font-size: 10px;
+  }
+
+  .weather {
+    gap: 8px;
+  }
+
+  .icon {
+    width: 30px;
+  }
+
+  .description {
+    font-size: 10px;
+  }
 }

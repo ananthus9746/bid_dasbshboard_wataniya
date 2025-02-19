@@ -1,9 +1,9 @@
 .card {
     background-color: rgba(255, 255, 255, 0.565);
-    padding: 14px;
-    border-radius: 20px;
+    padding: 13px;
+    border-radius: 17px;
     max-width:400px;
-    margin: 10px;
+    margin-bottom: 10px;
     padding-bottom: 2px;
 }
 
@@ -49,4 +49,41 @@
     padding: 0px;
     font-size: 11px;
     color: #888;
+}
+
+
+
+
+/* Media Query Specifically for 1366x768 */
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+    .card {
+        max-width: 280px;
+        padding: 10px;
+        border-radius: 14px;
+    }
+
+    .header {
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .arrow {
+        height: 22px;
+        width: 22px;
+    }
+
+    .amount {
+        font-size: 14px;
+    }
+
+    .subtitle {
+        font-size: 9px;
+    }
+
+    .content {
+        margin-top: 6px;
+    }
 }

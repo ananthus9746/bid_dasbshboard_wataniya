@@ -32,7 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.041);
     cursor: pointer;
 }
 
@@ -66,4 +66,52 @@
 .subText {
     font-size: 8px;
     color: #8c8c8c;
+}
+
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+    .card {
+        padding: 8px;
+        width: 15%;
+        height: 75px;
+    }
+
+    .title {
+        font-size: 8px;
+    }
+
+    .topRightIcon {
+        top: 8px;
+        right: 8px;
+        width: 22px;
+        height: 22px;
+    }
+
+    .value {
+        font-size: 12px;
+        margin-left: 2px;
+    }
+
+    .growthBadge {
+        padding: 3px 6px;
+        font-size: 7px;
+        border-radius: 12px;
+        gap: 4px;
+    }
+    .growthBadge svg{
+
+        size: 3px;
+    }
+
+    .subText {
+        font-size: 7px;
+    }
+
+    .badge_conta {
+        gap: 3px;
+    }
+
+    .valueContainer {
+        gap: 6px;
+    }
 }

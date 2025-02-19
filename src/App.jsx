@@ -53,10 +53,22 @@ import { Globe } from "./components/magicui/globe copy";
 
 const App = () => {
   return (
-    <div className="app_wrapper">
-      <div className="globe_background">
-        <div className="globe_wrapper">
-          <Globe />
+    <div className='wrapper'>
+      <Header />
+      <div className="main_wrapper">
+        <div className="left_side">
+          <Maincard />
+          <GrowthCard />
+          <GrowthCard />
+          <GrowthCard />
+        </div>
+
+        <div className="right_side">
+      
+          <CardsOne/>
+          <ChartWrapper />
+          <GrowthProgrssChart />
+
         </div>
       </div>
       <div className="content_wrapper">
