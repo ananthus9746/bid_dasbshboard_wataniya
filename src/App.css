@@ -8,14 +8,28 @@ body {
   height: 100vh;
   width: 100vw;
 
-
-    background-image: url(./assets/bg_globe.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: contain;
-      background-attachment: fixed;
-      background-size: 700px 700px;
+/* 
+  background-image: url(./assets/bg_globe.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-attachment: fixed;
+  background-size: 700px 700px; */
 }
+
+.globe_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 html {
   overflow: auto;
   /* Keeps the scroll functionality */
@@ -28,32 +42,22 @@ html::-webkit-scrollbar {
   /* For Chrome, Safari, and newer Edge */
 }
 
-.wrapper{
+.wrapper {
   padding: 20px 35px;
 }
 
-.globe_background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-}
 
 .globe_wrapper {
-    /* background-color: rgb(27, 40, 50); */
-  
+  /* background-color: rgb(27, 40, 50); */
+
 }
 
 .globe_wrapper>* {
   width: 100%;
   height: 100%;
 }
+
 .content_wrapper {
   position: relative;
   z-index: 1;
@@ -62,8 +66,9 @@ html::-webkit-scrollbar {
 .main_wrapper {
   display: flex;
 }
-.left_side{
-width: 23%;
+
+.left_side {
+  width: 23%;
 }
 
 .right_side {
