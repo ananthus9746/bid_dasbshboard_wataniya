@@ -7,6 +7,7 @@ import {
     Tooltip,
     ResponsiveContainer,
     CartesianGrid,
+    Cell,
 } from 'recharts';
 import styles from './GwpBarChart.module.css';
 
@@ -47,7 +48,7 @@ const GwpBarChart = () => {
                     $873,421.39 <span className={styles.subText}>$12,34,556 More than last year</span>
                 </p>
             </div>
-           
+
             <ResponsiveContainer width="100%" height={160} className={styles.chart_contain}>
                 <BarChart data={data} barGap={-28}>
                     <defs>
@@ -55,6 +56,17 @@ const GwpBarChart = () => {
                             <stop offset="0%" stopColor="#00A8E1" />
                             <stop offset="100%" stopColor="#0077B6" />
                         </linearGradient>
+                        <linearGradient id="juneGradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stopColor="#FF7F50" />
+                            <stop offset="100%" stopColor="#FF4500" />
+                        </linearGradient>
+                        <pattern id="diagonalLines" patternUnits="userSpaceOnUse" width="6" height="6">
+                            <path d="M 0 0 L 6 6 M -1 5 L 1 7 M 5 -1 L 7 1" stroke="#ffffff" strokeWidth="1" />
+                        </pattern>
+                        <mask id="barMaskPattern">
+                            <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                            <rect x="0" y="0" width="100%" height="100%" fill="url(#diagonalLines)" />
+                        </mask>
                     </defs>
 
                     <CartesianGrid strokeDasharray="3 3" vertical={false} horizontal={false} />
@@ -73,7 +85,19 @@ const GwpBarChart = () => {
                     <Tooltip content={<CustomTooltip />} cursor={{ fill: 'transparent' }} />
 
                     <Bar dataKey="previous" fill="#E9ECF0" barSize={28} radius={[5, 5, 0, 0]} />
-                    <Bar dataKey="current" fill="url(#currentGradient)" barSize={28} radius={[5, 5, 0, 0]} />
+
+                    <Bar dataKey="current" barSize={28} radius={[5, 5, 0, 0]}>
+                        {data.map((entry, index) => {
+                            const baseFill = entry.month === 'Jun' ? 'juneGradient' : 'currentGradient';
+                            return (
+                                <Cell
+                                    key={`cell-${index}`}
+                                    fill={`url(#${baseFill})`}
+                                    mask={entry.current > 0 ? 'url(#barMaskPattern)' : ''}
+                                />
+                            );
+                        })}
+                    </Bar>
                 </BarChart>
             </ResponsiveContainer>
         </div>
