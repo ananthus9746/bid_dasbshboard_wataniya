@@ -10,7 +10,6 @@ const GrowthCard = () => {
     return (
         <div
             className={styles.card_wrapper}
-            style={{ "--card-count": cards.length }}
         >
             <Maincard/>
             {cards.map((_, index) => (
