@@ -5,11 +5,15 @@ import { MdArrowOutward } from "react-icons/md";
 import Maincard from "../Maincard/Maincard";
 
 const GrowthCard = () => {
-    return (
-        <div className={styles.card_wrapper}>
-            <Maincard />
+    const cards = [1, 2, 3]; // Assuming 3 cards, replace with your data
 
-            {Array.from({ length: 3 }).map((_, index) => (
+    return (
+        <div
+            className={styles.card_wrapper}
+            style={{ "--card-count": cards.length }}
+        >
+            <Maincard/>
+            {cards.map((_, index) => (
                 <div key={index} className={styles.card}>
                     <div className={styles.header}>
                         <p className={styles.title}>Al Khobar</p>
