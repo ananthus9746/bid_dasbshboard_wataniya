@@ -52,21 +52,17 @@ const GwpBarChart = () => {
             <ResponsiveContainer width="100%" height={160} className={styles.chart_contain}>
                 <BarChart data={data} barGap={-28}>
                     <defs>
-                        <linearGradient id="currentGradient" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor="#00A8E1" />
-                            <stop offset="100%" stopColor="#0077B6" />
-                        </linearGradient>
-                        <linearGradient id="juneGradient" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor="#FF7F50" />
-                            <stop offset="100%" stopColor="#FF4500" />
-                        </linearGradient>
-                        <pattern id="diagonalLines" patternUnits="userSpaceOnUse" width="6" height="6">
-                            <path d="M 0 0 L 6 6 M -1 5 L 1 7 M 5 -1 L 7 1" stroke="#ffffff" strokeWidth="1" />
+                        {/* Stripe pattern definition */}
+                        <pattern id="stripePattern" patternUnits="userSpaceOnUse" width="8" height="8">
+                            <rect width="8" height="8" fill="#00A8E1" />
+                            <path d="M-2,2 l4,-4 M0,8 l8,-8 M6,10 l4,-4" stroke="white" strokeWidth="1" strokeOpacity="0.5" />
                         </pattern>
-                        <mask id="barMaskPattern">
-                            <rect x="0" y="0" width="100%" height="100%" fill="white" />
-                            <rect x="0" y="0" width="100%" height="100%" fill="url(#diagonalLines)" />
-                        </mask>
+
+                        <pattern id="juneStripePattern" patternUnits="userSpaceOnUse" width="8" height="8">
+                            <rect width="8" height="8" fill="#FF7F50" />
+                            <path d="M-2,2 l4,-4 M0,8 l8,-8 M6,10 l4,-4" stroke="white" strokeWidth="0.5" />
+                        </pattern>
+
                     </defs>
 
                     <CartesianGrid strokeDasharray="3 3" vertical={false} horizontal={false} />
@@ -85,18 +81,14 @@ const GwpBarChart = () => {
                     <Tooltip content={<CustomTooltip />} cursor={{ fill: 'transparent' }} />
 
                     <Bar dataKey="previous" fill="#E9ECF0" barSize={28} radius={[5, 5, 0, 0]} />
-
                     <Bar dataKey="current" barSize={28} radius={[5, 5, 0, 0]}>
-                        {data.map((entry, index) => {
-                            const baseFill = entry.month === 'Jun' ? 'juneGradient' : 'currentGradient';
-                            return (
-                                <Cell
-                                    key={`cell-${index}`}
-                                    fill={`url(#${baseFill})`}
-                                    mask={entry.current > 0 ? 'url(#barMaskPattern)' : ''}
-                                />
-                            );
-                        })}
+                        {data.map((entry, index) => (
+                            <Cell
+                                key={`cell-${index}`}
+                                fill={`url(#${entry.month === 'Jun' ? 'juneStripePattern' : 'stripePattern'})`}
+                                fillOpacity={1}
+                            />
+                        ))}
                     </Bar>
                 </BarChart>
             </ResponsiveContainer>
