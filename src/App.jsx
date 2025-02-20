@@ -21,8 +21,7 @@ const App = () => {
         <div className="left_side">
           <Maincard />
           <GrowthCard />
-          <GrowthCard />
-          <GrowthCard />
+        
         </div>
 
         <div className="right_side">
