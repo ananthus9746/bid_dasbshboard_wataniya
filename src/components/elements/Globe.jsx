@@ -120,7 +120,7 @@ gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0) * intensity;
     };
   }, []);
 
-  return <div ref={globeRef} style={{ width: '1500px', height: '1500px', overflow: 'hidden', position: 'relative' }} />;
+  return <div ref={globeRef} style={{ width: '1200px', height: '1200px', overflow: 'hidden', position: 'relative' }} />;
 }
 
 export default GlobeDemo;
