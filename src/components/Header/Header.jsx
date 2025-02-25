@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
-import { WiCloudy } from "react-icons/wi"; // Weather icon
-import logo from "../../assets/logo.png"; // Ensure correct path
+import { WiCloudy } from "react-icons/wi"; 
+import logo from "../../assets/logo.png";
 import axios from "axios";
 import weather_icon from '../../assets/weather.png'
 const Header = () => {
@@ -52,16 +52,12 @@ const Header = () => {
 
   return (
     <div className={styles.header}>
-      <div className={styles.left}>
-        <p className={styles.greeting}>Hello, Arthur Sjorgen</p>
-        <h2>Here’s <br /><span>What's happening at Wataniya</span></h2>
-      </div>
-
+  
       <div className={styles.center}>
         <img src={logo} alt="Wataniya Insurance" className={styles.logo} />
       </div>
 
-      <div className={styles.right}>
+      <div className={styles.container}>
         <div>
           <div className={styles.timer}>
             {time.toLocaleTimeString()}

@@ -44,12 +44,16 @@ const GwpBarChart = () => {
             <div className={styles.content}>
                 <h3 className={styles.title}>Average GWP</h3>
                 <span className={styles.year}>This year</span>
-                <p className={styles.amount}>
-                    $873,421.39 <span className={styles.subText}>$12,34,556 More than last year</span>
-                </p>
+                <div className={styles.amount_wrap}>
+                    <p className={styles.amount}>
+                        $873,421.39
+                    </p>
+                    <span className={styles.subText}>$12,34,556 More than last year</span>
+                </div>
+
             </div>
 
-            <ResponsiveContainer width="100%" height={160} className={styles.chart_contain}>
+            <ResponsiveContainer width="100%" height={200} className={styles.chart_contain}>
                 <BarChart data={data} barGap={-28}>
                     <defs>
                         {/* Stripe pattern definition */}

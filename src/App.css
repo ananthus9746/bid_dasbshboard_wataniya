@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: "Inter", serif;
-  background-color: #ECEFF3;
+  background-color: #DFDFE1;
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -44,8 +44,16 @@ html::-webkit-scrollbar {
 
 .wrapper {
   padding: 20px 35px;
+    position: relative;
 }
-
+.logo {
+  position: absolute;
+  left: 50%;
+  width: 220px;
+  transform: translateX(-50%);
+  margin: auto;
+  margin-top: 8px;
+}
 
 
 .globe_wrapper {

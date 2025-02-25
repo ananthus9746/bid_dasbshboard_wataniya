@@ -9,7 +9,7 @@ const GrowthBarChart = () => {
                 <span>Al Khobar</span>
                 <div className={styles.arrow}><MdArrowOutward size={10}/></div>
             </div>
-            <div className={styles.chartWrapper}>
+            <div className={styles.chartWrapper_one}>
                 <div className={styles.barsContainer}>
                     <span className={styles.chartTitle}>Corporate</span>
 
@@ -17,7 +17,7 @@ const GrowthBarChart = () => {
                     <div className={styles.currentBar} style={{ width: "50%" }} />
                 </div>
                 <div>
-                    <span className={styles.growthText}>30% growth than last year</span>
+                    <span className={styles.growthText}>30% growth </span>
                     <p className={styles.amountText}>$120,873</p>
                 </div>
 
@@ -32,7 +32,7 @@ const GrowthBarChart = () => {
                     <div className={styles.currentBar_orange} style={{ width: "50%" }} />
                 </div>
                 <div>
-                    <span className={styles.growthText}>30% growth than last year</span>
+                    <span className={styles.growthText}>30% growth </span>
                     <p className={styles.amountText}>$120,873</p>
                 </div>
 
