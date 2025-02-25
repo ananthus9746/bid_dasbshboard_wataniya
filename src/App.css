@@ -82,3 +82,10 @@ html::-webkit-scrollbar {
 .right_side {
   width: 77%;
 }
+
+
+@media screen and (max-width: 1366px) {
+  .logo{
+    width: 140px;
+  }
+}

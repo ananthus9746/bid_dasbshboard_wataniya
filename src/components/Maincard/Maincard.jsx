@@ -7,7 +7,7 @@ function Maincard() {
   return (
     <div className={styles.container_wrapper}>
       <div className={styles.greeting_container}>
-        <p className={styles.greeting}> <span className={styles.good_morning}>Good Morning, </span>Watanitya<br /> <span className={styles.good_morning}>Here</span>  is how things stand today!</p>
+        <p className={styles.greeting}> <span className={styles.good_morning} style={{ fontWeight: "100" }}>Good Morning, </span>Watanitya<br /> <span className={styles.good_morning} style={{ fontWeight: "100" }}>Here</span>  is how things stand today!</p>
       </div>
 
 
