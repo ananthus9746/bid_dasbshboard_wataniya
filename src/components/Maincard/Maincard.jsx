@@ -2,10 +2,16 @@ import React from 'react'
 import styles from './Maincard.module.css'
 import { BsArrowUpRight } from 'react-icons/bs'
 import { MdArrowOutward } from 'react-icons/md'
-
+import Vector from '../../assets/Vector.svg'
 function Maincard() {
   return (
     <div className={styles.container_wrapper}>
+      <div className={styles.loader_wrapper}>
+        <div className={styles.loader}>
+          <img src={Vector} />
+        </div>
+      </div>
+   
       <div className={styles.greeting_container}>
         <p className={styles.greeting}> <span className={styles.good_morning} style={{ fontWeight: "100" }}>Good Morning, </span>Watanitya<br /> <span className={styles.good_morning} style={{ fontWeight: "100" }}>Here</span>  is how things stand today!</p>
       </div>
